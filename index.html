@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WARDYAN STORE - متجر ورديَـــان</title>
+  <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body>
+    <!-- Start Header -->
+    <div class="header">
+      <div class="section">
+        <div class="cart">Cart</div>
+        <img decoding="async" class="logo" src="/images/logo.PNG" alt="missing" />
+        <div class="links">
+          <span class="icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <ul>
+            <li><a href="#feat">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- End Header -->
+    
+    <!-- Start Cover -->
+    <div class="landing">
+      <div class="intro-text">
+        <h1>Hello Darling</h1>
+        <p>We are WARDYAN - where love blooms.</p>
+        <button>Shop Now</button>
+      </div>
+    </div>
+    <!-- End Cover -->
+    
+    <!-- Start Features -->
+    <section class="featured" id="feat">
+      <h2>Featured Products</h2>
+      <div class="products">
+        <!-- Product 1 -->
+        <div class="product">
+          <img src="/images/rose1.JPEG" alt="Red Rose Bouquet">
+          <h3>Red Rose Bouquet</h3>
+          <p>600 $</p>
+          <button class="buy-btn" onclick="openModal('Red Rose Bouquet')">Buy Now</button>
+        </div>
+        <!-- Product 2 -->
+        <div class="product">
+          <img src="/images/rose2.JPEG" alt="White Rose Bouquet">
+          <h3>White Rose Bouquet</h3>
+          <p>500 $</p>
+          <button class="buy-btn" onclick="openModal('White Rose Bouquet')">Buy Now</button>
+        </div>
+        <!-- Product 3 -->
+        <div class="product">
+          <img src="/images/rose3.JPEG" alt="Lavender Bouquet">
+          <h3>Lavender Bouquet</h3>
+          <p>500 $</p>
+          <button class="buy-btn" onclick="openModal('Lavender Bouquet')">Buy Now</button>
+        </div>
+        <!-- Product 4 -->
+        <div class="product">
+          <img src="/images/rose4.JPEG" alt="Mixed Flower Bouquet">
+          <h3>Mixed Flower Bouquet</h3>
+          <p><del>1000</del> 800 $</p>
+          <button class="buy-btn" onclick="openModal('Mixed Flower Bouquet')">Buy Now</button>
+        </div>
+      </div>  
+    </section>
+    <!-- End Features -->
+    
+    <!-- Start Other Sections -->
+    <section class="about" id="about">
+      <h2>About Store</h2>
+      <p><bdi>
+      We offer the finest natural flower arrangements at affordable prices for all occasions.
+      </bdi></p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact us</h2>
+      <p><bdi>
+      VIA : <a class="link" href="bassim.ghaly@gmail.com">wardyan@gmail.com</a>
+      </bdi></p>
+    </section>
+
+    <footer><span class="logotext">WARDYAN STORE</span> All Rights Reserved &copy; 2025</footer>
+    <!-- End Other Sections -->
+    
+    <!-- Start Payment Form -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <h3>Purchase Form</h3>
+        <p id="product-name"></p>
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="E-mail">
+        <input type="tel" placeholder="Phone Number">
+        <input type="text" placeholder="Shipping Address">
+        <button onclick="submitForm()">Order Confirmation</button>
+      </div>
+    </div>
+    <!-- End Payment Form -->
+    
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- chef-belly developer -->
