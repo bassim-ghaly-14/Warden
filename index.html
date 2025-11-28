@@ -11,7 +11,7 @@
     <!-- Start Header -->
     <div class="header">
       <div class="section">
-        <div class="cart">Cart</div>
+        <div><a class="cart" href="#cartsec">Cart</a></div>
         <img decoding="async" class="logo" src="images/logo.PNG" alt="missing" />
         <div class="links">
           <span class="icon">
@@ -49,6 +49,7 @@
           <h3>Red Rose Bouquet</h3>
           <p>600 $</p>
           <button class="buy-btn" onclick="openModal('Red Rose Bouquet')">Buy Now</button>
+          <button class="add-to-cart" data-product="Red Rose Bouquet" data-price="600">Add to Cart</button>
         </div>
         <!-- Product 2 -->
         <div class="product">
@@ -56,6 +57,7 @@
           <h3>White Rose Bouquet</h3>
           <p>500 $</p>
           <button class="buy-btn" onclick="openModal('White Rose Bouquet')">Buy Now</button>
+          <button class="add-to-cart" data-product="White Rose Bouquet" data-price="500">Add to Cart</button>
         </div>
         <!-- Product 3 -->
         <div class="product">
@@ -63,6 +65,7 @@
           <h3>Lavender Bouquet</h3>
           <p>500 $</p>
           <button class="buy-btn" onclick="openModal('Lavender Bouquet')">Buy Now</button>
+          <button class="add-to-cart" data-product="Lavender Bouquet" data-price="500">Add to Cart</button>
         </div>
         <!-- Product 4 -->
         <div class="product">
@@ -70,10 +73,21 @@
           <h3>Mixed Flower Bouquet</h3>
           <p><del>1000</del> 800 $</p>
           <button class="buy-btn" onclick="openModal('Mixed Flower Bouquet')">Buy Now</button>
+          <button class="add-to-cart" data-product="Mixed Flower Bouquet" data-price="800">Add to Cart</button>
         </div>
       </div>  
     </section>
     <!-- End Features -->
+    
+    <!-- Start Cart -->
+    <section class="cartsec" id="cartsec">
+      <h2>Cart</h2>
+      <ul id="cart-items"></ul>
+      <hr class="raw">
+      <p id="total-price">Total: 0 $</p>
+      <button class="reset" id="clear-cart">Clear All</button>
+    </section>
+    <!-- End Cart -->
     
     <!-- Start Other Sections -->
     <section class="about" id="about">

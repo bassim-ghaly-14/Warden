@@ -22,4 +22,46 @@
         closeModal();
       }
     }
+    
+
+    // Cart
+    let cart = [];
+    let totalPrice = 0;
+
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', () => {
+        const product = button.dataset.product;
+        const price = parseInt(button.dataset.price);
+        addToCart(product, price);
+    });
+});
+
+function addToCart(product, price) {
+    const existingProduct = cart.find(item => item.product === product);
+    if (existingProduct) {
+        existingProduct.quantity++;
+    } else {
+        cart.push({ product, price, quantity: 1 });
+    }
+    updateCart();
+}
+
+function updateCart() {
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+    totalPrice = 0;
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.product} x ${item.quantity} = ${item.price * item.quantity} $`;
+        cartItems.appendChild(li);
+        totalPrice += item.price * item.quantity;
+    });
+    document.getElementById('total-price').textContent = `Total: ${totalPrice} $`;
+}
+    // Reset button
+    document.getElementById("clear-cart").addEventListener("click", function(){
+      document.getElementById("cart-items").innerHTML = "";
+      document.getElementById("total-price").innerHTML = "Total: 0 $";
+    });
+
     // chef-belly developer
